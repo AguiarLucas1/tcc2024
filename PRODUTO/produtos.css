@@ -1,0 +1,113 @@
+/* Ajuste na área de produtos */
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 55px; 
+    padding: 0px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.espaco{
+    margin-top: 50px;
+}
+
+
+.product-item {
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    text-align: center;
+    transition:  0.3s ease;
+}
+
+.product-item img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover; 
+}
+
+.product-item img:hover {
+    transform: scale(1.1);
+}
+
+.product-title {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.8em;
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    color: #222222;
+    font-weight: bold;
+    padding-top: 20px;
+}
+
+.product-price {
+    font-size: 1em;
+    color: #000000;
+    margin: 10px 0;
+}
+
+.product-item:hover {
+    transform: translateY(-10px);
+}
+
+.product-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* Estilos do título */
+.title-produtos {
+    font-size: 3rem; 
+    color: rgb(255, 255, 255);
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    margin: 10px 0;
+    text-shadow: 0 0 20px rgb(255, 124, 146), 0 0 30px rgb(255, 0, 43);
+    margin-top: 50px;
+    padding-top: 0;
+}
+
+
+
+@media (max-width: 768px) {
+    .product-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-item {
+        width: 90%; /* Menor largura para se ajustar melhor em telas pequenas */
+        margin-bottom: 30px;
+    }
+
+    .title-produtos {
+        font-size: 2.5rem; /* Reduzir o tamanho do título em telas menores */
+      
+    }
+}
+
+/* Responsividade para telas maiores */
+@media (min-width: 768px) {
+    .product-item {
+        width: 250px; /* Definindo uma largura fixa para garantir que não cresçam demais */
+    }
+
+    .product-item img {
+        max-width: 100%; /* Garante que a imagem se ajuste */
+        height: auto;
+        object-fit: cover;
+    }
+
+    .title-produtos {
+        font-size: 4rem; /* Tamanho maior para telas grandes */
+    }
+}

@@ -1,0 +1,77 @@
+
+.sobre-mim {
+    opacity: 98%;
+    margin-top: 3%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    background-color: pink;
+    }
+    
+    .imagem-perfil {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 40px;
+    }
+    
+    .imagem-perfil img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    }
+    
+    .historia {
+    flex: 1;
+    }
+    
+    .historia h2 {
+    font-size: 24px;
+    margin-bottom: 16px;
+    }
+    
+    .historia p {
+    font-size: 18px;
+    line-height: 1.5;
+    }
+    
+    /* Responsividade */
+
+@media (max-width: 768px) {
+    .sobre-mim {
+        
+    display: grid;
+        
+    padding: 20px;
+    }
+    .imagem-perfil {
+    height: 150px;
+    }
+    .historia h2 {
+    font-size: 20px;
+    }
+    .historia p {
+    font-size: 16px;
+    }
+    }
+    
+    @media (max-width: 480px) {
+    .sobre-mim {
+    padding: 10px;
+    }
+    .imagem-perfil {
+    height: 180px;
+    margin-bottom: 10px;
+
+    }
+    .historia h2 {
+    font-size: 18px;
+    }
+    .historia p {
+    font-size: 14px;
+    }
+    }
+    

@@ -1,0 +1,225 @@
+.carousel {
+  position: relative;
+  z-index: 1;
+  max-width: 100%;
+  min-height: auto;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 0;
+  margin-top: 0;
+}
+
+.carousel-images {
+  display: flex;
+  transition: 1s ease;
+  width: 300%;
+}
+
+.carousel-images img {
+  margin-top: 1%;
+  width: 33%;
+  height: 60vh;
+  border-radius: 0;
+ object-fit: contain;
+}
+
+button.prev, button.next {
+  position: absolute;
+  bottom: 80px;
+  border: #ffffff;
+  background-color: #ffffff(255, 255, 255, 0.5);
+  color: rgb(0, 0, 0);
+  border-radius: 0%;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 35px;
+  z-index: 1000;
+  transition: 0.8s ease;
+}
+
+button.prev:hover, button.next:hover {
+  background-color: rgb(255, 191, 202);
+}
+
+button.prev {
+  left: 23%;
+}
+
+button.next {
+  right: 23%;
+}
+
+@media (max-width: 999px) {
+  button.prev, button.next {
+    padding: 15px;
+  }
+
+  button.prev {
+    left: 5px;
+  }
+
+  button.next {
+    right: 5px;
+  }
+}
+ 
+
+
+   /*imagens de baixo do carrossel*/
+
+   
+   /* Estilos para as imagens de recomendações */
+.image-links {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap; /* Permite que as imagens quebrem para a linha seguinte */
+  margin-top: 15%;
+}
+
+.image-item {
+  width: calc(50% - 30px); /* Largura das imagens */
+  border-radius: 10px;      /* Bordas arredondadas */
+  overflow: hidden;         /* Esconde qualquer parte da imagem que ultrapasse o limite do container */
+  transition: 0.3s ease-in-out; /* Transição suave */
+}
+
+.image-item img {
+  width: 100%;              /* A imagem ocupa 100% da largura do container */
+  height: auto;             /* A altura é ajustada automaticamente para manter a proporção */
+  display: block;           /* Remove qualquer espaço abaixo da imagem */
+  border-radius: 10px;      /* Bordas arredondadas nas imagens */
+  object-fit: cover;        /* Assegura que a imagem ocupe todo o espaço sem distorcer */
+  transition: 0.3s ease-in-out; /* Animação suave para o efeito de zoom */
+}
+
+.image-item:hover img {
+  transform: scale(1); /* Aumenta a imagem ao passar o mouse */
+}
+
+.image-item:hover {
+  transform: scale(1.05); /* Leve aumento do item em si */
+}
+
+/* Responsividade para telas menores (tablets e smartphones) */
+@media (max-width: 763px) {
+  .image-item {
+    width: calc(50% - 20px); /* 2 imagens por linha em telas médias */
+  }
+}
+
+@media (max-width: 480px) {
+  .image-item {
+    width: 100%; /* 1 imagem por linha em telas muito pequenas */
+  }
+}
+
+
+  
+   
+  
+
+@media (min-width: 1024px) {
+/* Reduz o tamanho das imagens em telas maiores (por exemplo, desktops) */
+.image-item {
+width: calc(35% - 25px); /* 4 imagens por linha em telas grandes */
+}
+.image-item img {
+width: 70%;  /* Reduz o tamanho da imagem em telas grandes */
+}
+}
+              
+
+
+.products-header {
+  text-align: center;
+  margin-top: 90px;
+  margin-bottom: 0;
+  padding: 5px 0;
+  background-color:rgb(255, 191, 202);
+  border-radius: 22%;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.1); /* Adiciona sombra */
+}
+              
+.products-header h2 {
+  font-size: 3rem;
+  color: #000000;
+  margin-bottom: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  text-shadow: 0 0 5px #beb6b6; /* Adiciona sombra ao texto */
+}
+              
+.products-header p {
+font-size: 1.2rem;
+color: #555;
+font-family: Arial, Helvetica, sans-serif;
+margin: 0; 
+}
+              
+@media (max-width: 480px) {
+.products-header h2 {
+font-size: 1.5rem; 
+}
+              
+.products-header p {
+font-size: 2rem; 
+}
+}
+              
+
+.product-container {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 45px; 
+padding: 20px;
+max-width: 1200px;
+margin: 0 auto;
+margin-top: 50px
+}
+            
+.product-item {
+background-color: rgb(255, 255, 255);
+border-radius: 10px;
+overflow: hidden;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+width: 280px;
+text-align: center;
+transition:  0.3s ease;
+}
+            
+.product-item img {
+width: 100%;
+max-height: 300px;
+object-fit: cover; 
+}
+            
+.product-item img:hover {
+transform: scale(1.1);
+}
+
+.product-title {
+font-family: Arial, Helvetica, sans-serif;
+font-size: 0.8em;
+padding: 10px;
+background-color: rgb(255, 255, 255);
+color: #222222;
+font-weight: bold;
+}
+            
+.product-price {
+font-size: 1em;
+color: #000000;
+margin: 10px 0;
+}
+            
+.product-item:hover {
+transform: translateY(-10px);
+}
+            
+.product-link {
+display: block;
+text-decoration: none;
+color: inherit;
+}

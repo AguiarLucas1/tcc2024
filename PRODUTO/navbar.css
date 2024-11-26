@@ -1,0 +1,168 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: 0.3s;
+  font-size: xx-large;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+.logo {
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: whitesmoke;
+}
+
+
+/* Estilos do Navegador */
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  background: rgb(252, 157, 175);
+  height: 8vh;
+}
+
+main {
+  width: 100%;  /* Garantir que ocupe toda a largura da tela */
+  padding: 0;   /* Remover qualquer padding padrão */
+}
+
+
+/* Estilos da Lista de Navegação */
+.nav-list {
+  list-style: none;
+  display: flex;
+}
+
+.nav-list li {
+  letter-spacing: 3px;
+  margin-left: 32px;
+}
+
+/* Estilos do Menu Mobile */
+.mobile-menu {
+  position: relative;
+  display: flex;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 25px;
+  z-index: 2000;
+}
+
+.mobile-menu div {
+  width: 100%;
+  height: 2px;
+  background-color: #ffffff;
+  margin: 8px;
+  transition: 0.3s;
+}
+
+/* Estilos específicos para telas pequenas (Mobile) */
+@media (max-width: 999px) {
+  .carousel {
+    margin-top: 10vh;
+    position: relative;
+    z-index: 1;
+  }
+
+  body {
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+  }
+
+  .nav-list {
+    opacity: 96%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 279vh;
+    background: rgb(252, 157, 175);
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transform: translateX(100%);
+    transition: 0.3s ease-in;
+    z-index: 20;
+  }
+
+  .nav-list li {
+    margin-left: 0;
+    opacity: 0;
+  }
+
+  .mobile-menu {
+    display: block;
+    position: relative;
+    z-index: 2000;
+  }
+
+  /* Opacidade do fundo do menu quando o menu estiver aberto */
+  .menu-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(10, 10, 10, 0.5); /* Opacidade */
+    display: none; /* Inicialmente escondido */
+    z-index: 10; /* Fica abaixo do menu, mas acima do conteúdo */
+  }
+  
+  /* Quando o menu estiver ativo, o fundo será visível */
+  .menu-background.active {
+    display: block;
+    
+    
+  }
+}
+
+/* Quando o menu estiver visível */
+.nav-list.active {
+  transform: translateX(0);
+}
+
+/* Efeito de transição das linhas do hambúrguer */
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.mobile-menu.active .line1 {
+  transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.mobile-menu.active .line2 {
+  opacity: 0;
+}
+
+.mobile-menu.active .line3 {
+  transform: rotate(45deg) translate(-5px, -7px);
+}
+
+/* Adicionando o desfoque ao conteúdo do corpo quando o menu está aberto */
+body.menu-ativo {
+  filter: blur(5px);
+  transition: 0.3s ease;
+}
