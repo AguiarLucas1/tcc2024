@@ -1,8 +1,9 @@
+
 /* Estilos do Rodapé */
 footer {
     background-color: rgb(252, 157, 175);
-    color: #fff;  
-    margin-top: 10%
+    color: #fff;
+    padding: 10px 0;
   }
   
   footer .line-footer1 {
@@ -73,10 +74,10 @@ footer {
     color: #fff;
     cursor: pointer;
     border-radius: 30%;
-    font-size: 30px;
+    font-size: 20px;
     transition: 0.8s;
   }
   
   .btn-redes a button:hover {
-    background-color: #ff63a5;
+    background-color: #ffa7cb;
   }

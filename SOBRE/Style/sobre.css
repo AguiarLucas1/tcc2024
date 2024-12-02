@@ -1,0 +1,31 @@
+
+body{
+    background: url(../Img/1.jpg);
+}
+.inc
+{
+    width: 50px;
+    border-radius: 50%;
+    color: black;
+}
+.quem
+{
+    width: 200px;
+    height: 200px;
+    display: flex;
+    
+    justify-content: space-between;
+}
+.ic
+{
+    display: flex;
+    justify-content: space-around;
+}
+.is
+{
+    display: flex;
+    justify-content: space-around;
+}
+h1{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
