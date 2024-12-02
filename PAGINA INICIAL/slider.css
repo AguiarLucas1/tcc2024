@@ -1,6 +1,5 @@
 .carousel {
   position: relative;
-  z-index: 1;
   max-width: 100%;
   min-height: auto;
   margin: 0;
@@ -13,6 +12,7 @@
   display: flex;
   transition: 1s ease;
   width: 300%;
+
 }
 
 .carousel-images img {
@@ -29,10 +29,10 @@ button.prev, button.next {
   border: #ffffff;
   background-color: #ffffff(255, 255, 255, 0.5);
   color: rgb(0, 0, 0);
-  border-radius: 0%;
+  border-radius: 40%;
   cursor: pointer;
   padding: 10px;
-  font-size: 35px;
+  font-size: 25px;
   z-index: 1000;
   transition: 0.8s ease;
 }
@@ -43,10 +43,12 @@ button.prev:hover, button.next:hover {
 
 button.prev {
   left: 23%;
+  z-index: 0;
 }
 
 button.next {
   right: 23%;
+  z-index: 0;
 }
 
 @media (max-width: 999px) {

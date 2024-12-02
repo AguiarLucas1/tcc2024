@@ -2,9 +2,6 @@
   margin: 0;
   padding: 0;
 }
-.logo{
-  border-radius: 50%;
-}
 
 a {
   font-family: sans-serif;
@@ -54,6 +51,7 @@ a {
 }
 
 .hero {
+  height: calc(100vh - 70px);
   background: center / cover no-repeat url("");
 }
 
@@ -75,13 +73,12 @@ a {
   margin-top: 5px;
   position: relative;
   transition: 0.3s;
-  z-index: 3;
 }
 
 @media (max-width: 750px) {
   .hamburger {
     display: block;
-    z-index: 2;
+    z-index: 1;
   }
 
   .nav-list {
@@ -94,7 +91,7 @@ a {
     background: pink;
     clip-path: circle(100px at 90% -15%);
     transition: 1s ease-out;
-    z-index: 1;
+
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
@@ -140,7 +137,6 @@ a {
 
   .nav.active .hamburger::before {
     transform: rotate(135deg);
-    z-index: 2;
   }
 
   .nav.active .hamburger::after {

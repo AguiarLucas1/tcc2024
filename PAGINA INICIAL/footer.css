@@ -1,9 +1,7 @@
 /* Estilos do Rodapé */
 footer {
     background-color: rgb(252, 157, 175);
-    color: #fff;
-    padding: 10px 0;
-    
+    color: #fff;  
   }
   
   footer .line-footer1 {
