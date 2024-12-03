@@ -16,7 +16,7 @@
 }
 
 .carousel-images img {
-  margin-top: 1%;
+  margin-top: 2%;
   width: 33%;
   height: 60vh;
   border-radius: 0;
@@ -32,7 +32,7 @@ button.prev, button.next {
   border-radius: 40%;
   cursor: pointer;
   padding: 10px;
-  font-size: 25px;
+  font-size: 37px;
   z-index: 1000;
   transition: 0.8s ease;
 }
